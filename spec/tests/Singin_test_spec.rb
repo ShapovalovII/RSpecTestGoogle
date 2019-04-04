@@ -1,4 +1,4 @@
-require 'spec_helper.rb'
+require_relative  '../../spec/spec_helper'
 
 
 describe 'GoogleSingin' do
@@ -11,7 +11,7 @@ describe 'GoogleSingin' do
     find(:xpath, "//*[@id='password']/div[1]/div/div[1]/input").set("123")
     find(:xpath, "//*[@id='passwordNext']").click
 
-    actualError = find(:xpath, "//div[contains(@class, 'xgOPLd')]").text
+    actualError = find(:xpath, "//div[contains(@class, 'RxsGPe')]").text
     expect('Wrong password. Try again or click Forgot password to reset it.').to eq(actualError)
   end
 end
